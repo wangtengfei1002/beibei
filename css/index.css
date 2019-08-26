@@ -6,7 +6,11 @@
 html, body {
     height: 100%;
 }
-.content-box {
+a {
+    color: #000;
+    text-decoration: unset;
+}
+.detail-page .content-box {
     width: 1440px;
     margin: 0 auto;
     height: 100%;

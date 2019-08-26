@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html, body {
+    height: 100%;
+}
+.content-box {
+    width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.detail-page header {
+    height: 180px;
+}
+.detail-page content .content-box {
+    display: flex;
+    height: 700px;
+}
+.detail-page header img{
+    position: absolute;
+    bottom: 10px;
+    height: 100px;
+}
+.menu-box {
+    position: absolute;
+    top: 100px;
+    right: 95px;
+    width: 70px;
+    cursor: pointer;
+    z-index: 999;
+}
+/* 左侧导航 */
+.detail-page .left{
+    position: relative;
+    width: 315px;
+    display: flex;
+    font-size: 16px;
+}
+.detail-page .bottom {
+    position: absolute;
+    bottom: 0;
+}
+.detail-page .years {
+    width: 115px;
+    letter-spacing: 2px;
+}
+.detail-page .years li {
+    cursor: pointer;
+}
+.detail-page .years li:not(:nth-child(1)) {
+    margin-top: 45px;
+}
+.detail-page .cate {
+    width: calc(315px - 115px)
+}
+.detail-page .cate li {
+    cursor: pointer;
+}
+.detail-page .cate li.active span {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+.detail-page .cate li:not(:nth-child(1)) {
+    margin-top: 10px;
+}
+/* 内容 */
+.detail-page .right {
+    font-size: 20px;
+    position: relative;
+    letter-spacing: 3px;
+}
+.detail-page .right h3{
+    font-weight: normal;
+}
+.detail-page .right span, .detail-page .right p {
+    color: #3e3e3e;
+    display: block;
+    line-height: 30px;
+    margin-top: 20px;
+    width: 90%;
+    font-weight: 300;
+}
+.detail-page .right img {
+    margin-top: 22px;
+    width: 760px;
+}
+.detail-page .btn-grop {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 56px;
+    width: 106px;
+    border: 1px solid #000;
+    bottom: 0;
+}
+.detail-page .btn-grop div {
+    width: 50%;
+    text-align: center;
+    line-height: 56px;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 30px;
+}
+.detail-page .btn-grop div:hover {
+    color: #fff;
+    background: #000;
+}
+.detail-page .btn-grop div:first-child {
+    border-right: 1px solid #000;
+}
+/* 底部 */
+.detail-page footer {
+    height: 60px;
+    background: #000;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+@media only screen and (max-width: 1480px) {
+    .content-box {
+        width: 1000px;
+    }
+}

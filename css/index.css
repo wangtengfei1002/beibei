@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
 }
 html, body {
     height: 100%;
@@ -50,6 +51,7 @@ nav.active {
     z-index: 999;
     transition: all .3s ease;
     text-align: center;
+    background: #fff;
 }
 .menu-box .hambuger {
     display: inline-block;
@@ -66,16 +68,32 @@ nav.active {
 .menu-box.active {
     right: 335px;
 }
-.detail-page .content-box {
+/* 通用内容区 */
+.content-box {
     width: 1440px;
     margin: 0 auto;
     height: 100%;
     position: relative;
 }
+/* 底部 */
+.copy-right-footer {
+    height: 60px;
+    background: #000;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+/* 通用部分结束 */
+
+/* 详情页 */
 .detail-page header {
     height: 180px;
 }
-.detail-page content .content-box {
+.detail-page .content {
+    padding-bottom: 50px;
+}
+.detail-page .content .content-box {
     display: flex;
     height: 700px;
 }
@@ -166,15 +184,160 @@ nav.active {
 .detail-page .btn-grop div:first-child {
     border-right: 1px solid #000;
 }
-/* 底部 */
-.detail-page footer {
-    height: 60px;
+
+/* 招商加盟 */
+.join-page header{
+    height: 1080px;
+    width: calc(100% - 240px);
+    position: relative;
+}
+.join-page header img{
+    height: 100%;
+}
+.banner-mask {
+    width: 920px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 200px;
+    right: 0;
+    margin: 0 auto;
+    background: rgba(79, 51, 42, .5);
+}
+.join-page header .banner-content {
+    height: 320px;
+    width: 780px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    border: 3px solid #fff;
+    padding: 55px 40px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+/* 招商加盟内容 */
+.join-page .item {
+    padding: 78px 0;
+    position: relative;
+}
+.join-page .item-title {
+    margin: 30px 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.join-page .item1 {
+    height: 1080px;
+}
+.join-page .item1 .map {
+    position: absolute;
+    top: 78px;
+    right: 96px;
+}
+.join-page .item1 .info {
+    position: absolute;
+    bottom: 0;
+}
+.join-page .item1 .info li {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.join-page .item1 .info li:nth-child(2) {
+    margin-bottom: 30px;
+}
+.join-page .item1 .info img {
+    display: inline-block;
+    margin-bottom: -12px;
+    margin-right: 20px;
+}
+.join-page .item2 {
+    background: #f0efeb;
+}
+.join-page .item2 .card-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.join-page .item2 .card-box > li {
+    height: 520px;
+    width: 395px;
+    box-shadow: 0 2px 10px #000;
+    background: #fff;
+}
+.join-page .item2 .card-box div{
+    height: 210px;
+    background: #000;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 65px;
+}
+.join-page .item2 .card-box > li:nth-child(3) ~ li  {
+    margin-top: 90px;
+}
+.join-page .item2 .card-text {
+    padding-top: 10px;
+}
+.join-page .item2 .card-text li {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 0 60px 0 95px;
+    position: relative;
+}
+.join-page .item2 .card-text li:before {
+    content: '';
+    left: 62px;
+    top: 5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+}
+.join-page .item3 ul {
+    display: flex;
+    justify-content: space-between;
+}
+.join-page .item3 li {
+    height: 400px;
+    width: 400px;
+    border: 2px solid #000;
+    transition: all .3s ease;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+.join-page .item3 li:hover {
     background: #000;
     color: #fff;
-    line-height: 60px;
+}
+.join-page .item4 {
+    background: #f0efeb;
+}
+.join-page .item4 .item4-content {
+    margin-top: 30px;
+}
+.join-page .item5 {
     text-align: center;
-    letter-spacing: 2px;
-    margin-top: 40px;
+    font-size: 24px;
+}
+.join-page .item5 h3 {
+    margin-bottom: 30px;
+}
+.join-page .item5 p {
+    margin-top: 20px;
 }
 @media only screen and (max-width: 1480px) {
     .content-box {
